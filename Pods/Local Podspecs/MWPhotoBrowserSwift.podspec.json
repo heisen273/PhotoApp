@@ -1,0 +1,52 @@
+{
+  "name": "MWPhotoBrowserSwift",
+  "version": "0.1.0",
+  "license": "MIT",
+  "summary": "A simple iOS photo and video browser with optional grid view, captions and selections. Swift version.",
+  "description": "This is a Swift port of the original Objective-C work of Michael Waterfall.\n\nhttps://github.com/mwaterfall/MWPhotoBrowser\n\n            MWPhotoBrowserSwift can display one or more images or videos by providing either UIImage\n            objects, PHAsset objects, or URLs to library assets, web images/videos or local files.\n            The photo browser handles the downloading and caching of photos from the web seamlessly.\n            Photos can be zoomed and panned, and optional (customisable) captions can be displayed.",
+  "screenshots": [
+    "https://raw.github.com/mwaterfall/MWPhotoBrowser/master/Screenshots/MWPhotoBrowser1.png",
+    "https://raw.github.com/mwaterfall/MWPhotoBrowser/master/Screenshots/MWPhotoBrowser2.png",
+    "https://raw.github.com/mwaterfall/MWPhotoBrowser/master/Screenshots/MWPhotoBrowser3.png",
+    "https://raw.github.com/mwaterfall/MWPhotoBrowser/master/Screenshots/MWPhotoBrowser4.png",
+    "https://raw.github.com/mwaterfall/MWPhotoBrowser/master/Screenshots/MWPhotoBrowser5.png",
+    "https://raw.github.com/mwaterfall/MWPhotoBrowser/master/Screenshots/MWPhotoBrowser6.png"
+  ],
+  "homepage": "https://github.com/tapz/MWPhotoBrowserSwift",
+  "authors": {
+    "Tapani Saarinen": "tsaari@nic.fi"
+  },
+  "social_media_url": "https://linkedin.com/in/tapani",
+  "source": {
+    "git": "https://github.com/tapz/MWPhotoBrowserSwift.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "MWPhotoBrowserSwift": [
+      "Pod/Assets/*.png"
+    ]
+  },
+  "requires_arc": true,
+  "frameworks": [
+    "ImageIO",
+    "QuartzCore",
+    "AssetsLibrary",
+    "MediaPlayer"
+  ],
+  "weak_frameworks": "Photos",
+  "dependencies": {
+    "MBProgressHUD": [
+      "~> 0.9"
+    ],
+    "DACircularProgress": [
+      "~> 2.3"
+    ],
+    "MapleBacon": [
+      "~> 2.0"
+    ]
+  }
+}

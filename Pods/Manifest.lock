@@ -1,0 +1,33 @@
+PODS:
+  - DACircularProgress (2.3.1)
+  - Kingfisher (2.4.2)
+  - MapleBacon (2.0.8)
+  - MBProgressHUD (0.9.2)
+  - MWPhotoBrowserSwift (0.1.0):
+    - DACircularProgress (~> 2.3)
+    - MapleBacon (~> 2.0)
+    - MBProgressHUD (~> 0.9)
+
+DEPENDENCIES:
+  - Kingfisher (~> 2.4)
+  - MWPhotoBrowserSwift (from `https://github.com/tapz/MWPhotoBrowserSwift.git`)
+
+EXTERNAL SOURCES:
+  MWPhotoBrowserSwift:
+    :git: https://github.com/tapz/MWPhotoBrowserSwift.git
+
+CHECKOUT OPTIONS:
+  MWPhotoBrowserSwift:
+    :commit: 787a12ae54f932b022d1206d035a67205a72a6e6
+    :git: https://github.com/tapz/MWPhotoBrowserSwift.git
+
+SPEC CHECKSUMS:
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  Kingfisher: 05bf8d04408aaa70fcd2c8c81b9f1d0f1ad313dd
+  MapleBacon: 32e3590e1730485b93f450283ff242f9444efc12
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MWPhotoBrowserSwift: 5a248f0cd29fa7f6105477c33d5bb152e409cf26
+
+PODFILE CHECKSUM: c2ca2450032fdc4d1d65f742d5a9a9d7f917274e
+
+COCOAPODS: 1.0.1

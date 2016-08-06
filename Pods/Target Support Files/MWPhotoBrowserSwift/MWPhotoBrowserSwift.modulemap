@@ -1,0 +1,6 @@
+framework module MWPhotoBrowserSwift {
+  umbrella header "MWPhotoBrowserSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
