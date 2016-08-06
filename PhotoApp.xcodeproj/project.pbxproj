@@ -144,7 +144,7 @@
 				786F8BFA1B4440060033E657 /* Info.plist */,
 			);
 			name = "10/10 AMAZING APP";
-			path = "UICollectionView Xcode 7";
+			path = "super AMAZING APP";
 			sourceTree = "<group>";
 		};
 		786F8C021B4440060033E657 /* PhotoAppTests */ = {
@@ -163,8 +163,7 @@
 				786F8C0E1B4440060033E657 /* PhotoAppUITests.swift */,
 				786F8C101B4440060033E657 /* Info.plist */,
 			);
-			name = PhotoAppUITests;
-			path = "UICollectionView Xcode 7UITests";
+			path = PhotoAppUITests;
 			sourceTree = "<group>";
 		};
 		D6C31A57D4AC6A0618599DF7 /* Pods */ = {
@@ -590,7 +589,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "UICollectionView Xcode 7/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/super AMAZING APP/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tohasoftware.PhotoApp;
 				PRODUCT_NAME = PhotoApp;
@@ -606,7 +605,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "UICollectionView Xcode 7/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/super AMAZING APP/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tohasoftware.PhotoApp;
 				PRODUCT_NAME = PhotoApp;
