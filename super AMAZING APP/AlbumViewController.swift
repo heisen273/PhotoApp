@@ -30,7 +30,7 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
         
         
         
-        cache.maxCachePeriodInSecond = 60 * 10
+        cache.maxCachePeriodInSecond = 60
         
         cache.maxDiskCacheSize = 125 * 1024 * 1024
         

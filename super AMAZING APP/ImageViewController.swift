@@ -9,14 +9,18 @@
 import UIKit
 import Kingfisher
 import MWPhotoBrowserSwift
+import MapleBacon
+
 
 
 class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplicationDelegate, PhotoBrowserDelegate
 {
+
     
     //@IBOutlet weak var imagCollectionView: UICollectionView!
     
     @IBOutlet var imagCollectionView: UIView!
+    
     
     
     var cache = KingfisherManager.sharedManager.cache
@@ -32,6 +36,10 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplica
     
     
     override func viewWillAppear(animated: Bool) {
+        
+        
+        cache.maxCachePeriodInSecond = 60 * 15
+        
         self.navigationItem.hidesBackButton = true
         cache.clearMemoryCache()
         do {
@@ -165,6 +173,15 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplica
     func photoBrowserDidFinishModalPresentation(photoBrowser: PhotoBrowser) {
         self.dismissViewControllerAnimated(true, completion: nil)
         self.navigationController!.popViewControllerAnimated(false)
+        
+        
+        let maxAgeOneDay: NSTimeInterval = 60 * 15
+        DiskStorage.sharedStorage.maxAge = maxAgeOneDay
+        
+        cache.clearMemoryCache()
+        cache.cleanExpiredDiskCache()
+        
+        
     }
     
     func extract_json_data(data:NSString)
