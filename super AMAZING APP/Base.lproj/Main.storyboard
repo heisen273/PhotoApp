@@ -34,7 +34,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j9y-8m-x9k">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j9y-8m-x9k">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
                                                     <edgeInsets key="layoutMargins" top="10" left="10" bottom="10" right="10"/>
                                                 </imageView>
