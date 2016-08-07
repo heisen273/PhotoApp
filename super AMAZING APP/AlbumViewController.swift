@@ -9,6 +9,16 @@
 import UIKit
 import Kingfisher
 
+extension Array {
+    mutating func shuffle () {
+        for i in (0..<self.count).reverse() {
+            let ix1 = i
+            let ix2 = Int(arc4random_uniform(UInt32(i+1)))
+            (self[ix1], self[ix2]) = (self[ix2], self[ix1])
+        }
+    }
+}
+
 
 
 class AlbumViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIApplicationDelegate
@@ -21,14 +31,17 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
     var images = [String]()
     var labels = [String]()
     var albumids = [Int]()
+    var refresher = UIRefreshControl()
+    var images_shuf = [String]()
+    var labels_shuf = [String]()
+    var albumids_shuf = [Int]()
     let link = "https://api.vk.com/method/photos.getAlbums?owner_id=-40886007&need_covers=1&photo_sizes=1"
     
     var numberOfItemsPerSection: Int = 0
     var reachability: Reachability?
     
     override func viewWillAppear(animated: Bool) {
-        
-        
+    
         
         cache.maxCachePeriodInSecond = 60
         
@@ -64,16 +77,58 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
         get_json()
         
+        self.albumCollectionView.alwaysBounceVertical = true
+        refresher.tintColor = UIColor.blackColor()
+        refresher.attributedTitle = NSAttributedString(string: "Randomzie Albums")
+        
+        
+        refresher.addTarget(self, action: #selector(loadData), forControlEvents: .ValueChanged)
+        albumCollectionView.addSubview(refresher)
+        self.albumCollectionView.sendSubviewToBack(self.refresher)
+        refresher.layoutIfNeeded()
         albumCollectionView.delegate = self
         albumCollectionView.dataSource = self
         
     }
+
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.albumCollectionView.sendSubviewToBack(self.refresher)
+    }
+    
+    func loadData(){
+        autoreleasepool{
+            images_shuf.removeAll()
+            albumids_shuf.removeAll()
+            labels_shuf.removeAll()
+            //dispatch_async(dispatch_get_main_queue(), refresh)
+            dispatch_async(dispatch_get_main_queue(),{self.get_json()})
+            //dispatch_async(dispatch_get_main_queue(), refresh)
+            
+            dispatch_async(dispatch_get_main_queue(),{self.stopRefresher()})
+            
+            
+            //performSelectorInBackground(Selector(stopRefresher()), withObject: nil)
+            
+            cache.clearMemoryCache()
+            
+            
+            //NSOperationQueue.currentQueue()
+            //self.refresher.performSelector(Selector(stopRefresher()), withObject: nil, afterDelay: 0.0)
+            
+        }
+    }
+    
+    
+    
+    func stopRefresher()
+    {
+        
+        refresher.endRefreshing()
+    }
 
     override func didReceiveMemoryWarning()
     {
@@ -191,8 +246,19 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
         
         
-        dispatch_async(dispatch_get_main_queue(), refresh)
+        //dispatch_async(dispatch_get_main_queue(), refresh)
         }
+        var indexes = [Int](0...images.count-1)
+        indexes.shuffle()
+        
+        for i in indexes{
+            images_shuf.append(images[i])
+            labels_shuf.append(labels[i])
+            albumids_shuf.append(albumids[i])}
+        images = images_shuf
+        labels = labels_shuf
+        albumids = albumids_shuf
+        dispatch_sync(dispatch_get_main_queue(), refresh)
         print(labels)
         print(albumids)
         

@@ -26,7 +26,6 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplica
     var cache = KingfisherManager.sharedManager.cache
     var images = [MyImage]()
     var labels = [String]()
-    //var numberOfItemsPerSection: Int = 0
     var album_id: Int?
     var link: String?{
         return "https://api.vk.com/method/photos.get?owner_id=-40886007&album_id=\(Int(album_id!))"
@@ -65,31 +64,13 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplica
             let alert = UIAlertController(title: "No Internet Connection", message:"GET FIWI NEEGRO.", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "OKay.jpg", style: .Default) { _ in })
             self.presentViewController(alert, animated: true, completion: nil)
-            
-            //let alert = UIAlertView(title: "No Internet Connection", message: "GET FIWI NEEGRO.", delegate: nil, cancelButtonTitle: "OKay.jpg")
-            //alert.show()
+
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        //cache.maxDiskCacheSize = 50 * 1024 * 1024
-        
         get_json()
-        
-        
-        //showImageBrowser(images)
-        
-        /*imagCollectionView.delegate = self
-        imagCollectionView.dataSource = self*/
-        
-        /*let lpgr = UILongPressGestureRecognizer(target: self, action: #selector(ImageViewController.handleLongPress(_:)))
-        lpgr.minimumPressDuration = 0.5
-        lpgr.delaysTouchesBegan = true*/
-        
-        //self.imagCollectionView.addGestureRecognizer(lpgr)
         
     }
     
@@ -137,6 +118,7 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplica
         
         
         
+        
         let browserNavi = UINavigationController(rootViewController: browser)
         browserNavi.modalTransitionStyle = .CrossDissolve
         
@@ -157,11 +139,10 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplica
         photoBrowser.presentViewController(activityViewController, animated: true, completion: nil)
         
     }
-
     func numberOfPhotosInPhotoBrowser(photoBrowser: PhotoBrowser) -> Int {
         return photos.count
     }
-    
+       
     func photoAtIndex(index: Int, photoBrowser: PhotoBrowser) -> Photo {
         return photos[index]
     }
