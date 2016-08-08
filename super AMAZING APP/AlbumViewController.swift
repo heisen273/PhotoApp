@@ -92,16 +92,16 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
     {
         autoreleasepool
             {
-            images_shuf.removeAll()
-            albumids_shuf.removeAll()
-            labels_shuf.removeAll()
-            dispatch_async(dispatch_get_main_queue(),{self.get_json()})
-            cache.clearMemoryCache()
+                images.removeAll()
+                albumids.removeAll()
+                labels.removeAll()
+                images_shuf.removeAll()
+                albumids_shuf.removeAll()
+                labels_shuf.removeAll()
+            
+                dispatch_async(dispatch_get_main_queue(),{self.get_json()})
+                cache.clearMemoryCache()
             }
-        
-        images_shuf = Array(Set(images_shuf))
-        albumids_shuf = Array(Set(albumids_shuf))
-        labels_shuf = Array(Set(labels_shuf))
     }
     
     

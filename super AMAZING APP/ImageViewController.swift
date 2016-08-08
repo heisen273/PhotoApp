@@ -13,7 +13,7 @@ import MapleBacon
 
 
 
-class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplicationDelegate, PhotoBrowserDelegate
+class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplicationDelegate, PhotoBrowserDelegate, UIGestureRecognizerDelegate
 {
 
     @IBOutlet var imagCollectionView: UIView!
@@ -111,16 +111,23 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplica
         browser.startOnGrid = photos.count > 1
         browser.enableGrid = photos.count > 1
         browser.hideControlsOnStartup = 1 == photos.count
+        browser.enableSwipeToDismiss = true
         
         let browserNavi = UINavigationController(rootViewController: browser)
         browserNavi.modalTransitionStyle = .CrossDissolve
         if 1 == photos.count
         {
             browserNavi.modalPresentationStyle = .FullScreen
+            
         }
+        
         navigationController?.presentViewController(browserNavi, animated: true, completion: nil)
+        
+        
     }
-    
+    func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
     
     
     func actionButtonPressedForPhotoAtIndex(index: Int, photoBrowser: PhotoBrowser)
