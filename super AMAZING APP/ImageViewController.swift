@@ -16,13 +16,8 @@ import MapleBacon
 class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplicationDelegate, PhotoBrowserDelegate
 {
 
-    
-    //@IBOutlet weak var imagCollectionView: UICollectionView!
-    
     @IBOutlet var imagCollectionView: UIView!
-    
-    
-    
+
     var cache = KingfisherManager.sharedManager.cache
     var images = [MyImage]()
     var labels = [String]()
@@ -56,6 +51,8 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplica
         }
     }
     
+    
+    
     func reachabilityChanged(note: NSNotification)
     {
         let reachability = note.object as! Reachability
@@ -68,18 +65,24 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplica
         }
     }
     
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         get_json()
     }
     
+    
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-   
+    
+    
+    
     func showImageBrowser(images: [MyImage])
     {
         photos.removeAll(keepCapacity: true)
@@ -118,6 +121,8 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplica
         navigationController?.presentViewController(browserNavi, animated: true, completion: nil)
     }
     
+    
+    
     func actionButtonPressedForPhotoAtIndex(index: Int, photoBrowser: PhotoBrowser)
     {
         let img: UIImage = photoAtIndex(index, photoBrowser: photoBrowser).underlyingImage!
@@ -127,20 +132,21 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplica
         photoBrowser.presentViewController(activityViewController, animated: true, completion: nil)
     }
     
-    func numberOfPhotosInPhotoBrowser(photoBrowser: PhotoBrowser) -> Int
-    {
+    
+    
+    func numberOfPhotosInPhotoBrowser(photoBrowser: PhotoBrowser) -> Int{
         return photos.count
     }
        
-    func photoAtIndex(index: Int, photoBrowser: PhotoBrowser) -> Photo
-    {
+    func photoAtIndex(index: Int, photoBrowser: PhotoBrowser) -> Photo{
         return photos[index]
     }
     
-    func thumbPhotoAtIndex(index: Int, photoBrowser: PhotoBrowser) -> Photo
-    {
+    func thumbPhotoAtIndex(index: Int, photoBrowser: PhotoBrowser) -> Photo{
         return photos[index]
     }
+    
+    
     
     func photoBrowserDidFinishModalPresentation(photoBrowser: PhotoBrowser)
     {
@@ -152,6 +158,8 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplica
         cache.clearMemoryCache()
         cache.cleanExpiredDiskCache()
     }
+    
+    
     
     func extract_json_data(data:NSString)
     {
@@ -188,10 +196,12 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplica
                     }
     }
     
-    func refresh()
-    {
+    
+    
+    func refresh(){
         self.imagCollectionView.reloadInputViews()
     }
+    
     
     
     func get_json()

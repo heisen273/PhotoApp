@@ -36,6 +36,7 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
     var numberOfItemsPerSection: Int = 0
     var reachability: Reachability?
     
+    
     override func viewWillAppear(animated: Bool)
     {
         self.automaticallyAdjustsScrollViewInsets = true
@@ -60,6 +61,7 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
         }
     }
     
+    
     func reachabilityChanged(note: NSNotification)
     {
         let reachability = note.object as! Reachability
@@ -73,6 +75,7 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
         }
     }
     
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -83,6 +86,7 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
         albumCollectionView.pullToRefreshView.self
         
     }
+    
     
     func loadData()
     {
@@ -101,18 +105,17 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     
-    
     func stopRefresher()
     {
         albumCollectionView.pullToRefreshView.stopAnimating()
     }
+    
 
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     
     internal func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -126,6 +129,7 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
             return numberOfItemsPerSection
         }
     }
+    
     
     internal func scrollViewDidScroll(scrollView: UIScrollView)
     {
@@ -156,6 +160,8 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
         }
     }
     
+    
+    
     internal func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
         let albumCell:AlbumCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("albumCell", forIndexPath: indexPath) as! AlbumCollectionViewCell
@@ -177,6 +183,8 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
         return 1
     }
    
+    
+    
     func extract_json_data(data:NSString)
     {
         autoreleasepool
@@ -254,6 +262,7 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     
+    
     func get_json()
     {
        let url:NSURL = NSURL(string: link)!
@@ -281,6 +290,7 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
 
+    
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
     {
         let tmp = UIImageView()
@@ -293,6 +303,7 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
                 }
             }
     }
+    
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
