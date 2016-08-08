@@ -7,10 +7,12 @@ PODS:
     - DACircularProgress (~> 2.3)
     - MapleBacon (~> 2.0)
     - MBProgressHUD (~> 0.9)
+  - SVPullToRefresh (0.4.1)
 
 DEPENDENCIES:
   - Kingfisher (~> 2.4)
   - MWPhotoBrowserSwift (from `https://github.com/tapz/MWPhotoBrowserSwift.git`)
+  - SVPullToRefresh
 
 EXTERNAL SOURCES:
   MWPhotoBrowserSwift:
@@ -27,7 +29,8 @@ SPEC CHECKSUMS:
   MapleBacon: 32e3590e1730485b93f450283ff242f9444efc12
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MWPhotoBrowserSwift: 5a248f0cd29fa7f6105477c33d5bb152e409cf26
+  SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
 
-PODFILE CHECKSUM: c2ca2450032fdc4d1d65f742d5a9a9d7f917274e
+PODFILE CHECKSUM: e193587994fca81b2efa1d0aa7ff72bf942e2310
 
 COCOAPODS: 1.0.1

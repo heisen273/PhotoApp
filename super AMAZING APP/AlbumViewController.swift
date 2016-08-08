@@ -8,6 +8,8 @@
 
 import UIKit
 import Kingfisher
+import SVPullToRefresh
+
 
 extension Array {
     mutating func shuffle () {
@@ -31,21 +33,23 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
     var images = [String]()
     var labels = [String]()
     var albumids = [Int]()
-    var refresher = UIRefreshControl()
+    //let refresher = UIRefreshControl()
     var images_shuf = [String]()
     var labels_shuf = [String]()
     var albumids_shuf = [Int]()
     let link = "https://api.vk.com/method/photos.getAlbums?owner_id=-40886007&need_covers=1&photo_sizes=1"
+    
     
     var numberOfItemsPerSection: Int = 0
     var reachability: Reachability?
     
     override func viewWillAppear(animated: Bool) {
     
-        
+        self.automaticallyAdjustsScrollViewInsets = true
         cache.maxCachePeriodInSecond = 60
         
         cache.maxDiskCacheSize = 125 * 1024 * 1024
+        
         
         
         cache.cleanExpiredDiskCache()
@@ -78,26 +82,31 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
         get_json()
+    
+    
+        //self.albumCollectionView.alwaysBounceVertical = true
+        //refresher.tintColor = UIColor.blackColor()
+        //refresher.attributedTitle = NSAttributedString(string: "Randomzie Albums")
         
-        self.albumCollectionView.alwaysBounceVertical = true
-        refresher.tintColor = UIColor.blackColor()
-        refresher.attributedTitle = NSAttributedString(string: "Randomzie Albums")
         
         
-        refresher.addTarget(self, action: #selector(loadData), forControlEvents: .ValueChanged)
-        albumCollectionView.addSubview(refresher)
-        self.albumCollectionView.sendSubviewToBack(self.refresher)
-        refresher.layoutIfNeeded()
+        /*albumCollectionView.pullToRefreshView.arrowColor = UIColor.blackColor()
+        
+        albumCollectionView.pullToRefreshView.setTitle("Randomize Albums", forState: 1)*/
+        
+        //refresher.addTarget(self, action: #selector(loadData), forControlEvents: .ValueChanged)
+        //albumCollectionView.addSubview(refresher)
+        //self.albumCollectionView.sendSubviewToBack(self.refresher)
+        //refresher.layoutIfNeeded()
         albumCollectionView.delegate = self
         albumCollectionView.dataSource = self
+        albumCollectionView.pullToRefreshView.self
         
     }
+    
+
 
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        self.albumCollectionView.sendSubviewToBack(self.refresher)
-    }
     
     func loadData(){
         autoreleasepool{
@@ -108,7 +117,7 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
             dispatch_async(dispatch_get_main_queue(),{self.get_json()})
             //dispatch_async(dispatch_get_main_queue(), refresh)
             
-            dispatch_async(dispatch_get_main_queue(),{self.stopRefresher()})
+            
             
             
             //performSelectorInBackground(Selector(stopRefresher()), withObject: nil)
@@ -120,14 +129,22 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
             //self.refresher.performSelector(Selector(stopRefresher()), withObject: nil, afterDelay: 0.0)
             
         }
+        images_shuf = Array(Set(images_shuf))
+        albumids_shuf = Array(Set(albumids_shuf))
+        labels_shuf = Array(Set(labels_shuf))
+        
     }
     
     
     
     func stopRefresher()
     {
+        //self.albumCollectionView.contentInset = UIEdgeInsetsMake(200, 0, 0, 0)
         
-        refresher.endRefreshing()
+        //self.albumCollectionView.setContentOffset(CGPointMake(0, -self.albumCollectionView.contentInset.top), animated: true)
+        albumCollectionView.pullToRefreshView.stopAnimating()
+        
+        
     }
 
     override func didReceiveMemoryWarning()
@@ -157,12 +174,57 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
         
+        //let a = scrollView.frame.size.height
+        //let b = albumCollectionView.contentInset.top
+        
         if offsetY > contentHeight - scrollView.frame.size.height {
             numberOfItemsPerSection += 10
             self.albumCollectionView.reloadData()
             print("CLICK")
             print(numberOfItemsPerSection)
         }
+        
+        
+        
+        if offsetY < -160{
+            self.albumCollectionView.addPullToRefreshWithActionHandler {
+                //let contentHeight = self.albumCollectionView.contentInset.top
+                self.loadData()
+                
+                
+                var delayInSeconds = 0.75
+                var popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delayInSeconds * Double(NSEC_PER_SEC)))
+                
+                dispatch_after(popTime, dispatch_get_main_queue()) {() -> Void in
+                    self.stopRefresher()
+                    
+                }
+                
+                
+                
+                self.albumCollectionView.setContentOffset(CGPointMake(0, self.albumCollectionView.contentOffset.y), animated: true)
+                
+            }
+            self.albumCollectionView.pullToRefreshView.setSubtitle("randomize", forState: 1)
+            self.albumCollectionView.pullToRefreshView.setTitle("Release to randomize", forState: 1)
+
+        }
+        
+        
+        
+        
+
+        
+        
+        
+        /*self.albumCollectionView.addPullToRefreshWithActionHandler {
+            let contentHeight = self.albumCollectionView.contentInset.top
+            self.loadData()
+            
+            self.stopRefresher()
+            self.albumCollectionView.setContentOffset(CGPointMake(0, -contentHeight), animated: true)
+        }*/
+        
     }
     
     internal func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
