@@ -1,2 +1,2 @@
 # PhotoApp
-![alt tag](https://pp.vk.me/c604428/v604428490/1ffd3/hO0wb6zi74k.jpg) ![alt tag](https://pp.vk.me/c604428/v604428490/1ffca/7_lf1xevbRI.jpg) ![alt tag](https://pp.vk.me/c604428/v604428490/1ffc1/NiQUB3chwNw.jpg)
+![alt tag](https://pp.vk.me/c604428/v604428490/1ffdb/xtrZv08o2jE.jpg) ![alt tag](https://pp.vk.me/c604428/v604428490/1ffe3/zQuzYdUyumc.jpg) 
