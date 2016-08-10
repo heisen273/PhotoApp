@@ -125,10 +125,7 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplica
         
         
     }
-    func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
-        return true
-    }
-    
+   
     
     func actionButtonPressedForPhotoAtIndex(index: Int, photoBrowser: PhotoBrowser)
     {
