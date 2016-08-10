@@ -162,6 +162,7 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplica
         cache.clearMemoryCache()
         cache.cleanExpiredDiskCache()
     }
+    let a = 2
     
     
     
