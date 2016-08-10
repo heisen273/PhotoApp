@@ -157,8 +157,8 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplica
         self.dismissViewControllerAnimated(true, completion: nil)
         self.navigationController!.popViewControllerAnimated(false)
         
-        let maxAgeOneDay: NSTimeInterval = 60 * 15
-        DiskStorage.sharedStorage.maxAge = maxAgeOneDay
+        let maxAge15min: NSTimeInterval = 60 * 15
+        DiskStorage.sharedStorage.maxAge = maxAge15min
         cache.clearMemoryCache()
         cache.cleanExpiredDiskCache()
     }
