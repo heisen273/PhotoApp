@@ -69,7 +69,7 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
         if !reachability.isReachable()
         {
             print("Network not reachable")
-            let alert = UIAlertController(title: "No Internet Connection", message:"GET FIWI NEEGRO.", preferredStyle: .Alert)
+            let alert = UIAlertController(title: "No Internet Connection", message:"GET FIWI NEEGRO. \nAnd restart app after", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "OKay.jpg", style: .Default) { _ in })
             self.presentViewController(alert, animated: true, completion: nil)
         }
