@@ -24,6 +24,76 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3AC766731D60D5E500BD1466 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AC766661D60D5E500BD1466 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 28F3BEDCD4C4610A1F2B8E635B3D1562;
+			remoteInfo = DACircularProgress;
+		};
+		3AC766751D60D5E500BD1466 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AC766661D60D5E500BD1466 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 714CD7BF602EC7466380E0C2D757DF91;
+			remoteInfo = Kingfisher;
+		};
+		3AC766771D60D5E500BD1466 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AC766661D60D5E500BD1466 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4F87F31C041900D1A8E362AF614DEF75;
+			remoteInfo = MapleBacon;
+		};
+		3AC766791D60D5E500BD1466 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AC766661D60D5E500BD1466 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8EBEFC1559C28A2F34DA57DA6ED7EFE;
+			remoteInfo = MBProgressHUD;
+		};
+		3AC7667B1D60D5E500BD1466 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AC766661D60D5E500BD1466 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 78A4F0F9C0A5CE46F1AD30E49B98F6DE;
+			remoteInfo = MWPhotoBrowserSwift;
+		};
+		3AC7667D1D60D5E500BD1466 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AC766661D60D5E500BD1466 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86E13018A61D4C638056F6E848AB43A6;
+			remoteInfo = "MWPhotoBrowserSwift-MWPhotoBrowserSwift";
+		};
+		3AC7667F1D60D5E500BD1466 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AC766661D60D5E500BD1466 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0DF7F1A6126977291D2C5C4DA021682C;
+			remoteInfo = "Pods-PhotoApp";
+		};
+		3AC766811D60D5E500BD1466 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AC766661D60D5E500BD1466 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D83CA28F6B8189C38F9A5D65D3ABFB61;
+			remoteInfo = "Pods-PhotoAppTests";
+		};
+		3AC766831D60D5E500BD1466 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AC766661D60D5E500BD1466 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DEC7D40122507685A78BA72F4B93D137;
+			remoteInfo = "Pods-PhotoAppUITests";
+		};
+		3AC766851D60D5E500BD1466 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AC766661D60D5E500BD1466 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BD5B3CE8D1B5C430CA3D6057C5124C87;
+			remoteInfo = SVPullToRefresh;
+		};
 		786F8C001B4440060033E657 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 786F8BE31B4440050033E657 /* Project object */;
@@ -45,6 +115,7 @@
 		3A0414AA1D55583F003769B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A748BFD1D4BEC0B008BD76B /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		3AB4B4261D49FE7E00257B38 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		3AC766661D60D5E500BD1466 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		67DA0573CFC6F3586E183119 /* Pods_PhotoAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		786F8BEB1B4440060033E657 /* PhotoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		786F8BEE1B4440060033E657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,9 +178,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3AC766671D60D5E500BD1466 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AC766741D60D5E500BD1466 /* DACircularProgress.framework */,
+				3AC766761D60D5E500BD1466 /* Kingfisher.framework */,
+				3AC766781D60D5E500BD1466 /* MapleBacon.framework */,
+				3AC7667A1D60D5E500BD1466 /* MBProgressHUD.framework */,
+				3AC7667C1D60D5E500BD1466 /* MWPhotoBrowserSwift.framework */,
+				3AC7667E1D60D5E500BD1466 /* MWPhotoBrowserSwift.bundle */,
+				3AC766801D60D5E500BD1466 /* Pods_PhotoApp.framework */,
+				3AC766821D60D5E500BD1466 /* Pods_PhotoAppTests.framework */,
+				3AC766841D60D5E500BD1466 /* Pods_PhotoAppUITests.framework */,
+				3AC766861D60D5E500BD1466 /* SVPullToRefresh.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		786F8BE21B4440050033E657 = {
 			isa = PBXGroup;
 			children = (
+				3AC766661D60D5E500BD1466 /* Pods.xcodeproj */,
 				786F8BED1B4440060033E657 /* 10/10 AMAZING APP */,
 				786F8C021B4440060033E657 /* PhotoAppTests */,
 				786F8C0D1B4440060033E657 /* PhotoAppUITests */,
@@ -277,6 +366,12 @@
 			mainGroup = 786F8BE21B4440050033E657;
 			productRefGroup = 786F8BEC1B4440060033E657 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3AC766671D60D5E500BD1466 /* Products */;
+					ProjectRef = 3AC766661D60D5E500BD1466 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				786F8BEA1B4440050033E657 /* PhotoApp */,
@@ -285,6 +380,79 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3AC766741D60D5E500BD1466 /* DACircularProgress.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DACircularProgress.framework;
+			remoteRef = 3AC766731D60D5E500BD1466 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3AC766761D60D5E500BD1466 /* Kingfisher.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Kingfisher.framework;
+			remoteRef = 3AC766751D60D5E500BD1466 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3AC766781D60D5E500BD1466 /* MapleBacon.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MapleBacon.framework;
+			remoteRef = 3AC766771D60D5E500BD1466 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3AC7667A1D60D5E500BD1466 /* MBProgressHUD.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MBProgressHUD.framework;
+			remoteRef = 3AC766791D60D5E500BD1466 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3AC7667C1D60D5E500BD1466 /* MWPhotoBrowserSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MWPhotoBrowserSwift.framework;
+			remoteRef = 3AC7667B1D60D5E500BD1466 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3AC7667E1D60D5E500BD1466 /* MWPhotoBrowserSwift.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MWPhotoBrowserSwift.bundle;
+			remoteRef = 3AC7667D1D60D5E500BD1466 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3AC766801D60D5E500BD1466 /* Pods_PhotoApp.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_PhotoApp.framework;
+			remoteRef = 3AC7667F1D60D5E500BD1466 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3AC766821D60D5E500BD1466 /* Pods_PhotoAppTests.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_PhotoAppTests.framework;
+			remoteRef = 3AC766811D60D5E500BD1466 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3AC766841D60D5E500BD1466 /* Pods_PhotoAppUITests.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_PhotoAppUITests.framework;
+			remoteRef = 3AC766831D60D5E500BD1466 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3AC766861D60D5E500BD1466 /* SVPullToRefresh.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SVPullToRefresh.framework;
+			remoteRef = 3AC766851D60D5E500BD1466 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		786F8BE91B4440050033E657 /* Resources */ = {
