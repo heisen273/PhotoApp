@@ -115,15 +115,11 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplica
         
         let browserNavi = UINavigationController(rootViewController: browser)
         browserNavi.modalTransitionStyle = .CrossDissolve
-        if 1 == photos.count
-        {
+        if 1 == photos.count{
             browserNavi.modalPresentationStyle = .FullScreen
-            
         }
         
         navigationController?.presentViewController(browserNavi, animated: true, completion: nil)
-        
-        
     }
    
     

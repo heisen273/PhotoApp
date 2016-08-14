@@ -39,6 +39,7 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     override func viewWillAppear(animated: Bool)
     {
+        get_json()
         self.automaticallyAdjustsScrollViewInsets = true
         cache.maxCachePeriodInSecond = 60
         cache.maxDiskCacheSize = 125 * 1024 * 1024
@@ -79,7 +80,7 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        get_json()
+        //get_json()
     
         albumCollectionView.delegate = self
         albumCollectionView.dataSource = self
