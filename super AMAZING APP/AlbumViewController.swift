@@ -171,7 +171,7 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
         
         autoreleasepool
             {
-        albumCell.albumTitleLabel.text = self.labels[indexPath.row]
+        albumCell.albumTitleLabel!.text = self.labels[indexPath.row]
         let resource = Resource(downloadURL: NSURL(string: images[indexPath.row])!)
         albumCell.albumImageView.kf_showIndicatorWhenLoading = true
         albumCell.albumImageView.kf_setImageWithResource(resource, placeholderImage: UIImage(named:"asd"))

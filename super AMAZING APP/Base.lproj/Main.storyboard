@@ -20,15 +20,15 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mdE-WZ-v7b" userLabel="Album Collection View">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qOi-AD-zd8">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qOi-AD-zd8" customClass="VPStickyHeaderCollectionViewLayout" customModule="PhotoApp" customModuleProvider="target">
                                     <size key="itemSize" width="320" height="300"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="albumCell" id="oaf-z3-v0k" customClass="AlbumCollectionViewCell" customModule="PhotoApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="74" width="320" height="300"/>
+                                        <rect key="frame" x="0.0" y="64" width="320" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
@@ -39,7 +39,8 @@
                                                     <edgeInsets key="layoutMargins" top="10" left="10" bottom="10" right="10"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKi-S9-I7T">
-                                                    <rect key="frame" x="8" y="240" width="304" height="52"/>
+                                                    <rect key="frame" x="0.0" y="248" width="320" height="52"/>
+                                                    <color key="backgroundColor" red="0.48516616967535325" green="0.47978869791363893" blue="0.5" alpha="0.49612068965517242" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="52" id="Cm7-AW-mdZ"/>
                                                     </constraints>
@@ -52,10 +53,10 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="TKi-S9-I7T" firstAttribute="leading" secondItem="oaf-z3-v0k" secondAttribute="leadingMargin" id="J70-Sm-t8x"/>
+                                            <constraint firstItem="TKi-S9-I7T" firstAttribute="leading" secondItem="oaf-z3-v0k" secondAttribute="leadingMargin" constant="-8" id="J70-Sm-t8x"/>
                                             <constraint firstItem="j9y-8m-x9k" firstAttribute="leading" secondItem="oaf-z3-v0k" secondAttribute="leading" id="K77-D9-G0q"/>
                                             <constraint firstAttribute="trailing" secondItem="j9y-8m-x9k" secondAttribute="trailing" id="PI2-nU-vMe"/>
-                                            <constraint firstItem="TKi-S9-I7T" firstAttribute="bottom" secondItem="oaf-z3-v0k" secondAttribute="bottomMargin" id="Vo9-g8-9Fx"/>
+                                            <constraint firstItem="TKi-S9-I7T" firstAttribute="bottom" secondItem="oaf-z3-v0k" secondAttribute="bottomMargin" constant="8" id="Vo9-g8-9Fx"/>
                                             <constraint firstAttribute="bottom" secondItem="j9y-8m-x9k" secondAttribute="bottom" id="eRf-B5-cWZ"/>
                                             <constraint firstItem="j9y-8m-x9k" firstAttribute="top" secondItem="oaf-z3-v0k" secondAttribute="top" id="kT5-2m-FcL"/>
                                             <constraint firstItem="j9y-8m-x9k" firstAttribute="centerX" secondItem="TKi-S9-I7T" secondAttribute="centerX" id="ylL-cy-xhx"/>
@@ -88,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="384" y="119.99999999999999"/>
+            <point key="canvasLocation" x="384" y="120"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="RP2-F2-SkT">

@@ -10,7 +10,7 @@ import UIKit
 
 class AlbumCollectionViewCell: UICollectionViewCell
 {
-    @IBOutlet weak var albumTitleLabel: UILabel!
+    @IBOutlet weak var albumTitleLabel: UILabel?
     
     @IBOutlet weak var albumImageView: UIImageView!
     
