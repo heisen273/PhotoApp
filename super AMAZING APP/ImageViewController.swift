@@ -71,6 +71,10 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplica
     {
         super.viewDidLoad()
         get_json()
+
+        
+        
+
     }
     
     
@@ -113,13 +117,31 @@ class ImageViewController: UIViewController, UICollectionViewDelegate, UIApplica
         browser.hideControlsOnStartup = 1 == photos.count
         browser.enableSwipeToDismiss = true
         
+        
+        
         let browserNavi = UINavigationController(rootViewController: browser)
-        browserNavi.modalTransitionStyle = .CrossDissolve
+        browserNavi.modalTransitionStyle = .FlipHorizontal
+        
         if 1 == photos.count{
+            //browserNavi.modalTransitionStyle = .PartialCurl
             browserNavi.modalPresentationStyle = .FullScreen
+            
         }
         
         navigationController?.presentViewController(browserNavi, animated: true, completion: nil)
+    }
+    func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            
+            
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizerDirection.Right:
+                print("Swiped right")
+            default:
+                break
+            }
+        }
     }
    
     

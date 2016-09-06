@@ -7,6 +7,7 @@ target 'PhotoApp' do
   pod 'Kingfisher', '~> 2.4'
   pod 'SVPullToRefresh'
   pod 'MWPhotoBrowserSwift', :git => 'https://github.com/tapz/MWPhotoBrowserSwift.git'
+  pod 'MYNStickyFlowLayout'
 # Pods for PhotoApp
 
   target 'PhotoAppTests' do

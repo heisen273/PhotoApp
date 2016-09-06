@@ -33,13 +33,12 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
     var labels_shuf = [String]()
     var albumids_shuf = [Int]()
     let link = "https://api.vk.com/method/photos.getAlbums?owner_id=-40886007&need_covers=1&photo_sizes=1"
-    var numberOfItemsPerSection: Int = 0
+    var numberOfItemsPerSection: Int = 1
     var reachability: Reachability?
     
     
     override func viewWillAppear(animated: Bool)
     {
-        get_json()
         self.automaticallyAdjustsScrollViewInsets = true
         cache.maxCachePeriodInSecond = 60
         cache.maxDiskCacheSize = 125 * 1024 * 1024
@@ -80,7 +79,7 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        //get_json()
+        get_json()
     
         albumCollectionView.delegate = self
         albumCollectionView.dataSource = self
@@ -142,7 +141,7 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
             self.albumCollectionView.reloadData()
             print("CLICK")
             print(numberOfItemsPerSection)
-        }
+        }   
         
         if offsetY < -130
         {
@@ -166,8 +165,8 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
     internal func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
         let albumCell:AlbumCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("albumCell", forIndexPath: indexPath) as! AlbumCollectionViewCell
-        albumCell.layer.borderWidth=2.0
-        albumCell.layer.borderColor=UIColor.darkGrayColor().CGColor
+        //albumCell.layer.borderWidth=2.0
+        //albumCell.layer.borderColor=UIColor.darkGrayColor().CGColor
         
         autoreleasepool
             {

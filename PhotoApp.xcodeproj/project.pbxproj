@@ -11,6 +11,7 @@
 		2F3245F6C84DF193392AC5D2 /* Pods_PhotoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC5AE55E51DAB16064836D04 /* Pods_PhotoApp.framework */; };
 		3A0414991D552B81003769B9 /* MyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0414981D552B81003769B9 /* MyImage.swift */; };
 		3A0414AB1D55583F003769B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0414A91D55583F003769B9 /* Main.storyboard */; };
+		3A40175E1D67767E00626476 /* StickyHeaderCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40175D1D67767E00626476 /* StickyHeaderCollectionViewFlowLayout.swift */; };
 		3A748BFE1D4BEC0B008BD76B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A748BFD1D4BEC0B008BD76B /* Reachability.swift */; };
 		3AB4B4271D49FE7E00257B38 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB4B4261D49FE7E00257B38 /* ImageViewController.swift */; };
 		786F8BEF1B4440060033E657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786F8BEE1B4440060033E657 /* AppDelegate.swift */; };
@@ -24,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3A40176A1D67768100626476 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AC766661D60D5E500BD1466 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6331F940EE2DC824D79ECB211B51E914;
+			remoteInfo = MYNStickyFlowLayout;
+		};
 		3AC766731D60D5E500BD1466 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3AC766661D60D5E500BD1466 /* Pods.xcodeproj */;
@@ -113,6 +121,7 @@
 /* Begin PBXFileReference section */
 		3A0414981D552B81003769B9 /* MyImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyImage.swift; sourceTree = "<group>"; };
 		3A0414AA1D55583F003769B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A40175D1D67767E00626476 /* StickyHeaderCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyHeaderCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		3A748BFD1D4BEC0B008BD76B /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		3AB4B4261D49FE7E00257B38 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		3AC766661D60D5E500BD1466 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
@@ -187,6 +196,7 @@
 				3AC7667A1D60D5E500BD1466 /* MBProgressHUD.framework */,
 				3AC7667C1D60D5E500BD1466 /* MWPhotoBrowserSwift.framework */,
 				3AC7667E1D60D5E500BD1466 /* MWPhotoBrowserSwift.bundle */,
+				3A40176B1D67768100626476 /* MYNStickyFlowLayout.framework */,
 				3AC766801D60D5E500BD1466 /* Pods_PhotoApp.framework */,
 				3AC766821D60D5E500BD1466 /* Pods_PhotoAppTests.framework */,
 				3AC766841D60D5E500BD1466 /* Pods_PhotoAppUITests.framework */,
@@ -227,6 +237,7 @@
 				3AB4B4261D49FE7E00257B38 /* ImageViewController.swift */,
 				3A0414981D552B81003769B9 /* MyImage.swift */,
 				3A748BFD1D4BEC0B008BD76B /* Reachability.swift */,
+				3A40175D1D67767E00626476 /* StickyHeaderCollectionViewFlowLayout.swift */,
 				786F8BF51B4440060033E657 /* Assets.xcassets */,
 				3A0414A91D55583F003769B9 /* Main.storyboard */,
 				786F8BF71B4440060033E657 /* LaunchScreen.storyboard */,
@@ -382,6 +393,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		3A40176B1D67768100626476 /* MYNStickyFlowLayout.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MYNStickyFlowLayout.framework;
+			remoteRef = 3A40176A1D67768100626476 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		3AC766741D60D5E500BD1466 /* DACircularProgress.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -611,6 +629,7 @@
 			files = (
 				3A748BFE1D4BEC0B008BD76B /* Reachability.swift in Sources */,
 				3A0414991D552B81003769B9 /* MyImage.swift in Sources */,
+				3A40175E1D67767E00626476 /* StickyHeaderCollectionViewFlowLayout.swift in Sources */,
 				3AB4B4271D49FE7E00257B38 /* ImageViewController.swift in Sources */,
 				786F8BF11B4440060033E657 /* AlbumViewController.swift in Sources */,
 				786F8BEF1B4440060033E657 /* AppDelegate.swift in Sources */,
